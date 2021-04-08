@@ -1,10 +1,7 @@
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
 export default createProxyMiddleware({
-    target: process.env.FIREBASE_API_DOMAIN,
+    target: 'http://agritrackingsystems.com:3000',
     changeOrigin: true,
-    pathRewrite: {
-    '^/api': '/',
-    },
     prependPath: true,
 });
